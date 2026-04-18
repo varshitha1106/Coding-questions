@@ -1,0 +1,11 @@
+#User function Template for python3
+class Solution:
+	def removeVowels(self, s):
+		# code here
+		vowels="aeiouAEIOU"
+		res=""
+		for ch in s:
+		    if ch not in vowels:
+		        res+=ch
+		return res
+		        
