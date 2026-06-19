@@ -7,11 +7,11 @@ class Solution(object):
         if not strs:
             return ""
         prefix=strs[0]
-        for string in strs[1:]:
-            while not string.startswith(prefix):
-                prefix=prefix[:-1]
-                if not prefix:
-                    return ""
+
+        for i in range(len(prefix)):
+            for word in strs[1:]:
+                if i>=len(word) or word[i]!=prefix[i]:
+                    return prefix[:i]
         return prefix
 
         
